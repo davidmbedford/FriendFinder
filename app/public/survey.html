@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Friend Finder</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br>
+        <br>
+        <h1 class="header center grey-text text-lighten-5 thick">Survey</h1>
+        <div class="row center">
+          <h5 class="header col s12 grey-text text-lighten-5">Answer the questions and find yourself some new people!</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img class="responsive-img" src="images/partySweden.jpg" alt="Festival crowd at night"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <!--   Icon Section   -->
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <h3>Your Profile Info</h3>
+            <div class="input-field col s6">
+              <input id="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Last Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Image URL required"  id="password" type="password" class="validate">
+              <label for="password">Paste a link here to your favorite selfie!</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="funfact" type="text" class="validate">
+              <label for="funfact">Fun Fact about you! (optional)</label>
+            </div>
+          </div>
+        <div class="row">
+            <h3 class="surveyHeaderFix">Multiple Choice</h3>
+          <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected></option>
+              <option value="1">work with my hands.</option>
+              <option value="2">use my creativity.</option>
+              <option value="3">work on the road.</option>
+              <option value="4">lead a team.</option>
+              <option value="5">do nothing at all.</option>
+            </select>
+            <label>If I could do anything I want for a living, I'd choose to... </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected></option>
+              <option value="1">beach.</option>
+              <option value="2">mountains.</option>
+              <option value="3">forest.</option>
+              <option value="4">city.</option>
+              <option value="5">suburbs.</option>
+            </select>
+            <label>If I could live anywhere in the world, I'd aim for the... </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected></option>
+              <option value="1">music.</option>
+              <option value="2">scuplture.</option>
+              <option value="3">dance.</option>
+              <option value="4">painting.</option>
+              <option value="5">film.</option>
+            </select>
+            <label>The most fascinating artistic medium is... </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected></option>
+              <option value="1">learning code and developing software.</option>
+              <option value="2">some form of martial arts.</option>
+              <option value="3">vocational skills such as electrical work and automechanics.</option>
+              <option value="4">learning a new musical instrument.</option>
+              <option value="5">all of the books collecting dust on my bookcase.</option>
+            </select>
+            <label>If I was given enough money to spend a full month studying whatever I want, I'd focus on... </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected></option>
+              <option value="1">at a concert.</option>
+              <option value="2">visiting a museum.</option>
+              <option value="3">hitting up the stadium to see my favorite sports team.</option>
+              <option value="4">catching up on work.</option>
+              <option value="5">doing nothing.</option>
+            </select>
+            <label>I'd prefer to spend my weekend... </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected></option>
+              <option value="1">Asia.</option>
+              <option value="2">Europe.</option>
+              <option value="3">Africa.</option>
+              <option value="4">Australia.</option>
+              <option value="5">South America.</option>
+            </select>
+            <label>If I could vacation anywhere next week for free, I'd travel to... </label>
+          </div>
+        </div>
+        <div class="row">
+          <h3 class="surveyHeaderFix">On a Scale of 1 to 5...</h3>
+          <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3 (meh)</option>
+              <option value="4">4</option>
+              <option value="5">5 (strongly agree)</option>
+            </select>
+            <label>I'd much rather be outdoors than cramped inside.</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3 (meh)</option>
+              <option value="4">4</option>
+              <option value="5">5 (strongly agree)</option>
+            </select>
+            <label>I'm a big fan of video games.</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3 (meh)</option>
+              <option value="4">4</option>
+              <option value="5">5 (strongly agree)</option>
+            </select>
+            <label>I don't like eating meat.</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3 (meh)</option>
+              <option value="4">4</option>
+              <option value="5">5 (strongly agree)</option>
+            </select>
+            <label>I don't really care about politics.</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3 (meh)</option>
+              <option value="4">4</option>
+              <option value="5">5 (strongly agree)</option>
+            </select>
+            <label>It's really hard to offend or upset me. </label>
+          </div>
+        </div>
+        </form>
+      </div>
+
+  </div>
+`</div>
+
+  <!-- <div class="parallax-container align-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light"></h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img class="responsive-img" src="images/picnicCity.jpg" alt="Unsplashed background img 3"></div>
+  </div> -->
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="materialize/js/materialize.js"></script>
+  <script src="materialize/js/init.js"></script>
+
+  </body>
+</html>

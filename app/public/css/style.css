@@ -7,8 +7,12 @@
  */
 
 
- p {
+ .thick {
+  font-weight: bold
+ }
 
+ .surveyHeaderFix {
+   padding: 0px  0px 1px 0px;
  }
 
  .parallax-container {
@@ -16,6 +20,7 @@
    line-height: 0;
    height: auto;
    color: rgba(255,255,255,.9);
+   padding-bottom: 20%;
  }
    .parallax-container .section {
      width: 100%;
