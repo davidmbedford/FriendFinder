@@ -1,0 +1,59 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+
+ .thick {
+  font-weight: bold
+ }
+
+ .surveyHeaderFix {
+   padding: 0px  0px 1px 0px;
+ }
+
+ .parallax-container {
+   min-height: 380px;
+   line-height: 0;
+   height: auto;
+   color: rgba(255,255,255,.9);
+   padding-bottom: 20%;
+ }
+   .parallax-container .section {
+     width: 100%;
+   }
+
+ @media only screen and (max-width : 992px) {
+   .parallax-container .section {
+     position: absolute;
+     top: 40%;
+   }
+   #index-banner .section {
+     top: 10%;
+   }
+ }
+
+ @media only screen and (max-width : 600px) {
+   #index-banner .section {
+     top: 0;
+   }
+ }
+
+ .icon-block {
+   padding: 0 15px;
+ }
+ .icon-block .material-icons {
+   font-size: inherit;
+ }
+
+ .titleText {
+   font-weight: bold;
+   color: rgb(114, 113, 113);
+ }
+
+ #homeCard {
+   padding: 5px;
+ }
