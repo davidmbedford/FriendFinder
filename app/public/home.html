@@ -7,8 +7,8 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="public/materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="public/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
 
@@ -36,7 +36,8 @@
           <div class="card" id="homeCard">
             <p>oijfoeijf oiejfoweijf oewifj woeifj woeifj woeifj woeifjw efoiwej fowiejf woeijf owiejf wonc wnc lijdnc lsajdnc lsakjdnc salnjc lsakjcn salkdjnc salkjdncalknc lksajdnclksajdnc salkjdnc alkjdncsalkjdnc lsakjdncidncwq ncwiudnc salinc salkjnc lsadncwiudnc asucdnh saldnjcas lnjc salkjnc salkjc </p>
             <p>oijfoeijf oiejfoweijf oewifj woeifj woeifj woeifj woeifjw efoiwej fowiejf woeijf owiejf wonc wnc lijdnc lsajdnc lsakjdnc salnjc lsakjcn salkdjnc salkjdncalknc lksajdnclksajdnc salkjdnc alkjdncsalkjdnc lsakjdncidncwq ncwiudnc salinc salkjnc lsadncwiudnc asucdnh saldnjcas lnjc salkjnc salkjc </p>
-            <a class="waves-effect waves-light btn"><i class="material-icons left">home</i>Survey</a>
+            <a class="waves-effect waves-light btn" href="./api/friends"><i class="material-icons left">home</i>Survey</a>
+
           </div>
         </div>
     </div>
@@ -54,10 +55,16 @@
     <div class="parallax"><img class="responsive-img" src="images/picnicCity.jpg" alt="Unsplashed background img 3"></div>
   </div>
 
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <a href="/api/friends">API Friends Database</a>
+    </div>
+  </footer>
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="materialize/js/materialize.js"></script>
-  <script src="materialize/js/init.js"></script>
+  <script src="public/materialize/js/materialize.js"></script>
+  <script src="public/materialize/js/init.js"></script>
 
   </body>
 </html>
