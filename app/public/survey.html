@@ -7,7 +7,7 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="materialize/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
@@ -19,7 +19,7 @@
         <br>
         <h1 class="header center grey-text text-lighten-5 thick">Survey</h1>
         <div class="row center">
-          <h5 class="header col s12 grey-text text-lighten-5">Answer the questions and find yourself some new people!</h5>
+          <h5 class="header col s12 grey-text text-lighten-5">Answer the questions asbest you can, and we'll find some great minds who think alike</h5>
         </div>
       </div>
     </div>
@@ -44,20 +44,20 @@
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input placeholder="Image URL required"  id="password" type="password" class="validate">
-              <label for="password">Paste a link here to your favorite selfie!</label>
+              <input id="picture" type="text" class="validate">
+              <label for="password">Paste a link here to your favorite selfie! (image URL required)</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="funfact" type="text" class="validate">
+              <input id="fun_fact" type="text" class="validate">
               <label for="funfact">Fun Fact about you! (optional)</label>
             </div>
           </div>
         <div class="row">
             <h3 class="surveyHeaderFix">Multiple Choice</h3>
           <div class="input-field col s12">
-            <select>
+            <selectn class="chosen-select" id="profQone">
               <option value="" disabled selected></option>
               <option value="1">work with my hands.</option>
               <option value="2">use my creativity.</option>
@@ -70,7 +70,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select>
+            <select class="chosen-select" id="profQtwo">
               <option value="" disabled selected></option>
               <option value="1">beach.</option>
               <option value="2">mountains.</option>
@@ -83,7 +83,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select>
+            <select class="chosen-select" id="profQthree">
               <option value="" disabled selected></option>
               <option value="1">music.</option>
               <option value="2">scuplture.</option>
@@ -96,7 +96,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select>
+            <select class="chosen-select" id="profQfour">
               <option value="" disabled selected></option>
               <option value="1">learning code and developing software.</option>
               <option value="2">some form of martial arts.</option>
@@ -109,7 +109,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select>
+            <select class="chosen-select" id="profQfive">
               <option value="" disabled selected></option>
               <option value="1">at a concert.</option>
               <option value="2">visiting a museum.</option>
@@ -122,7 +122,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select>
+            <select class="chosen-select" id="profQsix">
               <option value="" disabled selected></option>
               <option value="1">Asia.</option>
               <option value="2">Europe.</option>
@@ -136,7 +136,7 @@
         <div class="row">
           <h3 class="surveyHeaderFix">On a Scale of 1 to 5...</h3>
           <div class="input-field col s12">
-            <select>
+            <select class="chosen-select" id="survQone">
               <option value="" disabled selected></option>
               <option value="1">1 (strongly disagree)</option>
               <option value="2">2</option>
@@ -149,7 +149,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select>
+            <select class="chosen-select" id="survQtwo">
               <option value="" disabled selected></option>
               <option value="1">1 (strongly disagree)</option>
               <option value="2">2</option>
@@ -162,7 +162,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select>
+            <select class="chosen-select" id="survQthree">
               <option value="" disabled selected></option>
               <option value="1">1 (strongly disagree)</option>
               <option value="2">2</option>
@@ -175,7 +175,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select>
+            <select class="chosen-select" id="survQfour">
               <option value="" disabled selected></option>
               <option value="1">1 (strongly disagree)</option>
               <option value="2">2</option>
@@ -188,7 +188,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select>
+            <select class="chosen-select" id="survQfive">
               <option value="" disabled selected></option>
               <option value="1">1 (strongly disagree)</option>
               <option value="2">2</option>
@@ -199,27 +199,147 @@
             <label>It's really hard to offend or upset me. </label>
           </div>
         </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <select class="chosen-select" id="survQsix">
+              <option value="" disabled selected></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3 (meh)</option>
+              <option value="4">4</option>
+              <option value="5">5 (strongly agree)</option>
+            </select>
+            <label>I love dogs!</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <select class="chosen-select" id="survQseven">
+              <option value="" disabled selected></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3 (meh)</option>
+              <option value="4">4</option>
+              <option value="5">5 (strongly agree)</option>
+            </select>
+            <label>I love cats!</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <select class="chosen-select" id="survQeight">
+              <option value="" disabled selected></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3 (meh)</option>
+              <option value="4">4</option>
+              <option value="5">5 (strongly agree)</option>
+            </select>
+            <label>There's too many billionaires.</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <select class="chosen-select" id="survQnine">
+              <option value="" disabled selected></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3 (meh)</option>
+              <option value="4">4</option>
+              <option value="5">5 (strongly agree)</option>
+            </select>
+            <label>I love staying out until sunrise.</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <select class="chosen-select" id="survQten">
+              <option value="" disabled selected></option>
+              <option value="1">1 (strongly disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3 (meh)</option>
+              <option value="4">4</option>
+              <option value="5">5 (strongly agree)</option>
+            </select>
+            <label>I rely more on knowledge than imagination.</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary submit">Submit</button>
         </form>
       </div>
 
   </div>
 `</div>
 
-  <!-- <div class="parallax-container align-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light"></h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img class="responsive-img" src="images/picnicCity.jpg" alt="Unsplashed background img 3"></div>
-  </div> -->
 
-  <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="materialize/js/materialize.js"></script>
+  <script src="materialize/js/materialize.min.js"></script>
   <script src="materialize/js/init.js"></script>
 
   </body>
 </html>
+
+<script type="text/javascript">
+  // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+  // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+  // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
+  // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
+  $(".submit").on("click", function(event) {
+    event.preventDefault();
+    // Here we grab the form elements
+    function validateForm() {
+        let isValid = true;
+        $(".validate").each(function() {
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+
+        $(".chosen-select").each(function() {
+
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+        return isValid;
+      }
+
+    var newfriend = {
+      firstName: $("#first_name").val().trim(),
+      lastName: $("#last_name").val().trim(),
+      picture: $("#picture").val().trim(),
+      funFact: $("#fun_fact").val().trim(),
+      profQone: $("profQone").val().trim(),
+      profQtwo: $("profQtwo").val().trim(),
+      profQthree: $("profQthree").val().trim(),
+      profQfour: $("profQfour").val().trim(),
+      profQfive: $("profQfive").val().trim(),
+      profQsix: $("profQsix").val().trim(),
+      score: [
+        $("survQone").val().trim(),
+        $("survQtwo").val().trim(),
+        $("survQthree").val().trim(),
+        $("survQfour").val().trim(),
+        $("survQfive").val().trim(),
+        $("survQsix").val().trim(),
+        $("survQseven").val().trim(),
+        $("survQeight").val().trim(),
+        $("survQnine").val().trim(),
+        $("survQten").val().trim()
+      ]
+    };
+
+    console.log(newFriend);
+
+    $.post("/api/tables", newFriend,
+      function(data) {
+
+        // Clear the form when submitting
+        $("#reserve-name").val("");
+        $("#reserve-phone").val("");
+        $("#reserve-email").val("");
+        $("#reserve-unique-id").val("");
+
+      });
+
+  });
