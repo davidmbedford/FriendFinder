@@ -2,8 +2,16 @@
 
 let friendsArray = [
   {
-    name: "Yarg",
-    photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    firstName: "Yarg",
+    lastName: "Foreman",
+    picture: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    funFact: "Vegetables are meat!",
+    pQ1: "",
+    pQ2: "",
+    pQ3: "",
+    pQ4: "",
+    pQ5: "",
+    pQ6: "",
     scores: [
       5,
       1,
@@ -15,11 +23,18 @@ let friendsArray = [
       5,
       4,
       1
-    ]
-  },
-  {
-    name: "Bjorn",
-    photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+      ]
+    }, {
+    firstName: "Bjorn",
+    lastName: "Darvis",
+    picture: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    funFact: "I have ten fingers",
+    pQ1: "",
+    pQ2: "",
+    pQ3: "",
+    pQ4: "",
+    pQ5: "",
+    pQ6: "",
     scores: [
       2,
       2,
@@ -32,11 +47,41 @@ let friendsArray = [
       2,
       1
     ]
-  },
-  {
-  name: "Hagrid",
-  photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-  scores: [
+    }, {
+    firstName: "Jimbo",
+    lastName: "Peep",
+    picture: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    funFact: "Water is a myth",
+    pQ1: "",
+    pQ2: "",
+    pQ3: "",
+    pQ4: "",
+    pQ5: "",
+    pQ6: "",
+    score: [
+      2,
+      3,
+      4,
+      5,
+      1,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+    }, {
+    firstName: "Hagrid",
+    lastName: "Mantis",
+    picture: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    funFact: "My father was a large chair",
+    pQ1: "",
+    pQ2: "",
+    pQ3: "",
+    pQ4: "",
+    pQ5: "",
+    pQ6: "",
+    scores: [
       3,
       2,
       3,

@@ -8,6 +8,7 @@
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="materialize/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
@@ -34,30 +35,30 @@
           <div class="row">
             <h3>Your Profile Info</h3>
             <div class="input-field col s6">
-              <input id="first_name" type="text" class="validate">
+              <input id="first_name" type="text" class="form-control">
               <label for="first_name">First Name</label>
             </div>
             <div class="input-field col s6">
-              <input id="last_name" type="text" class="validate">
+              <input id="last_name" type="text" class="form-control">
               <label for="last_name">Last Name</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="picture" type="text" class="validate">
+              <input id="picture" type="text" class="form-control">
               <label for="password">Paste a link here to your favorite selfie! (image URL required)</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="fun_fact" type="text" class="validate">
+              <input id="fun_fact" type="text" class="form-control">
               <label for="funfact">Fun Fact about you! (optional)</label>
             </div>
           </div>
         <div class="row">
             <h3 class="surveyHeaderFix">Multiple Choice</h3>
           <div class="input-field col s12">
-            <selectn class="chosen-select" id="profQone">
+            <select class="chosen-select" id="profQone">
               <option value="" disabled selected></option>
               <option value="1">work with my hands.</option>
               <option value="2">use my creativity.</option>
@@ -264,15 +265,50 @@
             <label>I rely more on knowledge than imagination.</label>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary submit">Submit</button>
         </form>
       </div>
 
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+      Submit</button>
+
+     <hr>
+     <footer class="footer">
+       <div class="container">
+         <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
+       </div>
+     </footer>
+
+   </div>
+
+   <!-- Modal -->
+   <div id="results-modal" class="modal fade" role="dialog">
+     <div class="modal-dialog">
+
+       <!-- Modal content-->
+       <div class="modal-content">
+         <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+           <h2 class="modal-title"><strong>Best Match</strong></h2>
+         </div>
+         <div class="modal-body">
+           <h2 id="match-name"></h2>
+           <img id="match-img" alt="profile pic">
+         </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
+       </div>
+
+     </div>
+   </div>
+
   </div>
-`</div>
+ </div>
 
 
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
   <script src="materialize/js/materialize.min.js"></script>
   <script src="materialize/js/init.js"></script>
 
@@ -280,66 +316,104 @@
 </html>
 
 <script type="text/javascript">
-  // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
-  // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
-  // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
-  // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
-  $(".submit").on("click", function(event) {
+
+    var config = {
+      ".chosen-select": {},
+      ".chosen-select-deselect": {
+        allow_single_deselect: true
+      },
+      ".chosen-select-no-single": {
+        disable_search_threshold: 10
+      },
+      ".chosen-select-no-results": {
+        no_results_text: "Oops, nothing found!"
+      },
+      ".chosen-select-width": {
+        width: "95%"
+      }
+    };
+
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    };
+
+
+   $("#submit").on("click", function(event) {
     event.preventDefault();
     // Here we grab the form elements
     function validateForm() {
         let isValid = true;
-        $(".validate").each(function() {
+        $(".form-control").each(function() {
           if ($(this).val() === "") {
             isValid = false;
           }
         });
 
         $(".chosen-select").each(function() {
-
           if ($(this).val() === "") {
             isValid = false;
           }
         });
+
         return isValid;
-      }
+      };
 
-    var newfriend = {
-      firstName: $("#first_name").val().trim(),
-      lastName: $("#last_name").val().trim(),
-      picture: $("#picture").val().trim(),
-      funFact: $("#fun_fact").val().trim(),
-      profQone: $("profQone").val().trim(),
-      profQtwo: $("profQtwo").val().trim(),
-      profQthree: $("profQthree").val().trim(),
-      profQfour: $("profQfour").val().trim(),
-      profQfive: $("profQfive").val().trim(),
-      profQsix: $("profQsix").val().trim(),
-      score: [
-        $("survQone").val().trim(),
-        $("survQtwo").val().trim(),
-        $("survQthree").val().trim(),
-        $("survQfour").val().trim(),
-        $("survQfive").val().trim(),
-        $("survQsix").val().trim(),
-        $("survQseven").val().trim(),
-        $("survQeight").val().trim(),
-        $("survQnine").val().trim(),
-        $("survQten").val().trim()
-      ]
-    };
+    if (validateForm()) {
 
-    console.log(newFriend);
+      let newfriend = {
+        firstName: $("#first_name").val().trim(),
+        lastName: $("#last_name").val().trim(),
+        picture: $("#picture").val().trim(),
+        funFact: $("#fun_fact").val().trim(),
+        pQ1: $("#profQone").val().trim(),
+        pQ2: $("#profQtwo").val().trim(),
+        pQ3: $("#profQthree").val().trim(),
+        pQ4: $("#profQfour").val().trim(),
+        pQ5: $("#profQfive").val().trim(),
+        pQ6: $("#profQsix").val().trim(),
+        score: [
+          $("#survQone").val().trim(),
+          $("#survQtwo").val().trim(),
+          $("#survQthree").val().trim(),
+          $("#survQfour").val().trim(),
+          $("#survQfive").val().trim(),
+          $("#survQsix").val().trim(),
+          $("#survQseven").val().trim(),
+          $("#survQeight").val().trim(),
+          $("#survQnine").val().trim(),
+          $("#survQten").val().trim()
+          ]
+        };
 
-    $.post("/api/tables", newFriend,
-      function(data) {
+      console.log(newFriend);
 
-        // Clear the form when submitting
-        $("#reserve-name").val("");
-        $("#reserve-phone").val("");
-        $("#reserve-email").val("");
-        $("#reserve-unique-id").val("");
+      $.post("/api/friends", newFriend, function(data) {
+
+        $("#match-name").text(data.firstName + " " + data.lastName);
+        $("#match-img").attr("src", data.picture);
+        $("#match-funFact").text(data.funFact);
+        $("#match-pQ1").text(data.pQ1);
+        $("#match-pQ2").text(data.pQ2);
+        $("#match-pQ3").text(data.pQ3);
+        $("#match-pQ4").text(data.pQ4);
+        $("#match-pQ5").text(data.pQ5);
+        $("#match-pQ6").text(data.pQ6);
+
+        $("#results-modal").modal("toggle");
 
       });
-
+    } else {
+      alert("Please fill out all fields!");
+    }
   });
+
+    // $.post("/api/tables", newFriend,
+    //   function(data) {
+
+    //     // Clear the form when submitting
+    //     $("#reserve-name").val("");
+    //     $("#reserve-phone").val("");
+    //     $("#reserve-email").val("");
+    //     $("#reserve-unique-id").val("");
+
+    //   });
