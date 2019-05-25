@@ -58,7 +58,7 @@ let friendsArray = [
     pQ4: "",
     pQ5: "",
     pQ6: "",
-    score: [
+    scores: [
       2,
       3,
       4,
