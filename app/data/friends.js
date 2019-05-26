@@ -1,6 +1,6 @@
 //Friend Finder API
 
-let friendsArray = [
+let friends = [
   {
     firstName: "Yarg",
     lastName: "Foreman",
@@ -95,4 +95,4 @@ let friendsArray = [
     ]
   }];
 
-module.exports = friendsArray;
+module.exports = friends;
