@@ -8,6 +8,7 @@
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="materialize/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
@@ -20,6 +21,7 @@
         <h1 class="header center grey-text text-lighten-5 thick">Survey</h1>
         <div class="row center">
           <h5 class="header col s12 grey-text text-lighten-5">Answer the questions asbest you can, and we'll find some great minds who think alike</h5>
+          <a class="waves-effect waves-light btn center-align" href="/home"><i class="material-icons left">home</i></a>
         </div>
       </div>
     </div>
@@ -34,30 +36,30 @@
           <div class="row">
             <h3>Your Profile Info</h3>
             <div class="input-field col s6">
-              <input id="first_name" type="text" class="validate">
+              <input id="first_name" type="text" class="qValidate">
               <label for="first_name">First Name</label>
             </div>
             <div class="input-field col s6">
-              <input id="last_name" type="text" class="validate">
+              <input id="last_name" type="text" class="qValidate">
               <label for="last_name">Last Name</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="picture" type="text" class="validate">
+              <input id="picture" type="text" class="qValidate">
               <label for="password">Paste a link here to your favorite selfie! (image URL required)</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="fun_fact" type="text" class="validate">
+              <input id="fun_fact" type="text" class="qValidate">
               <label for="funfact">Fun Fact about you! (optional)</label>
             </div>
           </div>
         <div class="row">
             <h3 class="surveyHeaderFix">Multiple Choice</h3>
           <div class="input-field col s12">
-            <selectn class="chosen-select" id="profQone">
+            <select class="qValidate" id="profQone">
               <option value="" disabled selected></option>
               <option value="1">work with my hands.</option>
               <option value="2">use my creativity.</option>
@@ -70,7 +72,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select class="chosen-select" id="profQtwo">
+            <select class="qValidate" id="profQtwo">
               <option value="" disabled selected></option>
               <option value="1">beach.</option>
               <option value="2">mountains.</option>
@@ -83,7 +85,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select class="chosen-select" id="profQthree">
+            <select class="qValidate" id="profQthree">
               <option value="" disabled selected></option>
               <option value="1">music.</option>
               <option value="2">scuplture.</option>
@@ -96,7 +98,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select class="chosen-select" id="profQfour">
+            <select class="qValidate" id="profQfour">
               <option value="" disabled selected></option>
               <option value="1">learning code and developing software.</option>
               <option value="2">some form of martial arts.</option>
@@ -109,7 +111,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select class="chosen-select" id="profQfive">
+            <select class="qValidate" id="profQfive">
               <option value="" disabled selected></option>
               <option value="1">at a concert.</option>
               <option value="2">visiting a museum.</option>
@@ -122,7 +124,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select class="chosen-select" id="profQsix">
+            <select class="qValidate" id="profQsix">
               <option value="" disabled selected></option>
               <option value="1">Asia.</option>
               <option value="2">Europe.</option>
@@ -136,7 +138,7 @@
         <div class="row">
           <h3 class="surveyHeaderFix">On a Scale of 1 to 5...</h3>
           <div class="input-field col s12">
-            <select class="chosen-select" id="survQone">
+            <select class="qValidate" id="survQone">
               <option value="" disabled selected></option>
               <option value="1">1 (strongly disagree)</option>
               <option value="2">2</option>
@@ -149,7 +151,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select class="chosen-select" id="survQtwo">
+            <select class="qValidate" id="survQtwo">
               <option value="" disabled selected></option>
               <option value="1">1 (strongly disagree)</option>
               <option value="2">2</option>
@@ -162,7 +164,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select class="chosen-select" id="survQthree">
+            <select class="qValidate" id="survQthree">
               <option value="" disabled selected></option>
               <option value="1">1 (strongly disagree)</option>
               <option value="2">2</option>
@@ -175,7 +177,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select class="chosen-select" id="survQfour">
+            <select class="qValidate" id="survQfour">
               <option value="" disabled selected></option>
               <option value="1">1 (strongly disagree)</option>
               <option value="2">2</option>
@@ -188,7 +190,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select class="chosen-select" id="survQfive">
+            <select class="qValidate" id="survQfive">
               <option value="" disabled selected></option>
               <option value="1">1 (strongly disagree)</option>
               <option value="2">2</option>
@@ -201,7 +203,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select class="chosen-select" id="survQsix">
+            <select class="qValidate" id="survQsix">
               <option value="" disabled selected></option>
               <option value="1">1 (strongly disagree)</option>
               <option value="2">2</option>
@@ -214,7 +216,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select class="chosen-select" id="survQseven">
+            <select class="qValidate" id="survQseven">
               <option value="" disabled selected></option>
               <option value="1">1 (strongly disagree)</option>
               <option value="2">2</option>
@@ -227,7 +229,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select class="chosen-select" id="survQeight">
+            <select class="qValidate" id="survQeight">
               <option value="" disabled selected></option>
               <option value="1">1 (strongly disagree)</option>
               <option value="2">2</option>
@@ -240,7 +242,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select class="chosen-select" id="survQnine">
+            <select class="qValidate" id="survQnine">
               <option value="" disabled selected></option>
               <option value="1">1 (strongly disagree)</option>
               <option value="2">2</option>
@@ -253,7 +255,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select class="chosen-select" id="survQten">
+            <select class="qValidate" id="survQten">
               <option value="" disabled selected></option>
               <option value="1">1 (strongly disagree)</option>
               <option value="2">2</option>
@@ -264,15 +266,41 @@
             <label>I rely more on knowledge than imagination.</label>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary submit">Submit</button>
         </form>
       </div>
+    </div>
 
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+      Submit</button>
+    </div>
+
+     <hr>
+
+     <footer class="footer">
+       <div class="container">
+         <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/davidmbedford">GitHub Repo</a></p>
+       </div>
+     </footer>
+
+   <div id="results-modal" class="modal fade" role="dialog">
+    <a class="modal-trigger" href="#modal-match">Modal</a>
+
+  <!-- Modal Structure -->
+    <div id="modal-match" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h2><strong>Best Match</strong></h2>
+      <h4 id="match-name"></h4>
+      <a src="" id="match-img"></a>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+    </div>
   </div>
-`</div>
-
 
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
   <script src="materialize/js/materialize.min.js"></script>
   <script src="materialize/js/init.js"></script>
 
@@ -280,66 +308,79 @@
 </html>
 
 <script type="text/javascript">
-  // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
-  // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
-  // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
-  // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
-  $(".submit").on("click", function(event) {
+
+
+   $("#submit").on("click", function(event) {
     event.preventDefault();
-    // Here we grab the form elements
+
     function validateForm() {
         let isValid = true;
-        $(".validate").each(function() {
+        $(".qValidate").each(function() {
           if ($(this).val() === "") {
             isValid = false;
           }
         });
 
-        $(".chosen-select").each(function() {
-
-          if ($(this).val() === "") {
-            isValid = false;
-          }
-        });
         return isValid;
-      }
+      };
 
-    var newfriend = {
-      firstName: $("#first_name").val().trim(),
-      lastName: $("#last_name").val().trim(),
-      picture: $("#picture").val().trim(),
-      funFact: $("#fun_fact").val().trim(),
-      profQone: $("profQone").val().trim(),
-      profQtwo: $("profQtwo").val().trim(),
-      profQthree: $("profQthree").val().trim(),
-      profQfour: $("profQfour").val().trim(),
-      profQfive: $("profQfive").val().trim(),
-      profQsix: $("profQsix").val().trim(),
-      score: [
-        $("survQone").val().trim(),
-        $("survQtwo").val().trim(),
-        $("survQthree").val().trim(),
-        $("survQfour").val().trim(),
-        $("survQfive").val().trim(),
-        $("survQsix").val().trim(),
-        $("survQseven").val().trim(),
-        $("survQeight").val().trim(),
-        $("survQnine").val().trim(),
-        $("survQten").val().trim()
-      ]
-    };
+    if (validateForm()) {
 
-    console.log(newFriend);
+      let newFriend = {
+        firstName: $("#first_name").val().trim(),
+        lastName: $("#last_name").val().trim(),
+        picture: $("#picture").val().trim(),
+        funFact: $("#fun_fact").val().trim(),
+        pQ1: parseInt($("#profQone").val().trim()),
+        pQ2: parseInt($("#profQtwo").val().trim()),
+        pQ3: parseInt($("#profQthree").val().trim()),
+        pQ4: parseInt($("#profQfour").val().trim()),
+        pQ5: parseInt($("#profQfive").val().trim()),
+        pQ6: parseInt($("#profQsix").val().trim()),
+        scores: [
+          parseInt($("#survQone").val().trim()),
+          parseInt($("#survQtwo").val().trim()),
+          parseInt($("#survQthree").val().trim()),
+          parseInt($("#survQfour").val().trim()),
+          parseInt($("#survQfive").val().trim()),
+          parseInt($("#survQsix").val().trim()),
+          parseInt($("#survQseven").val().trim()),
+          parseInt($("#survQeight").val().trim()),
+          parseInt($("#survQnine").val().trim()),
+          parseInt($("#survQten").val().trim())
+          ]
+        };
 
-    $.post("/api/tables", newFriend,
-      function(data) {
+      console.log(newFriend);
 
-        // Clear the form when submitting
-        $("#reserve-name").val("");
-        $("#reserve-phone").val("");
-        $("#reserve-email").val("");
-        $("#reserve-unique-id").val("");
+      $.post("/api/friends", newFriend, function(data) {
+
+        $("#match-name").text(data.firstName + " " + data.lastName);
+        $("#match-img").attr("src", data.picture);
+        // $("#match-funFact").text(data.funFact);
+        // $("#match-pQ1").text(data.pQ1);
+        // $("#match-pQ2").text(data.pQ2);
+        // $("#match-pQ3").text(data.pQ3);
+        // $("#match-pQ4").text(data.pQ4);
+        // $("#match-pQ5").text(data.pQ5);
+        // $("#match-pQ6").text(data.pQ6);
+
+        $("#modal-match").modal("toggle");
 
       });
-
+    } else {
+      alert("Please fill out all fields!");
+    }
   });
+
+    // $.post("/api/tables", newFriend,
+    //   function(data) {
+
+    //     // Clear the form when submitting
+    //     $("#reserve-name").val("");
+    //     $("#reserve-phone").val("");
+    //     $("#reserve-email").val("");
+    //     $("#reserve-unique-id").val("");
+
+    //   });
+</script>
